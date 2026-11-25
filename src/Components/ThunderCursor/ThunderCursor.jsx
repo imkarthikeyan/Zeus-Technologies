@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Zap } from "lucide-react";
 import "./ThunderCursor.css";
 

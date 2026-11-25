@@ -1,15 +1,15 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
-    Sun,
-    Moon,
     Menu,
     X,
-    Zap
+    Sun,
+    Moon
 } from "lucide-react";
 
-import { useTheme } from "../../Context/ThemeContext.jsx";
+import { useTheme } from "../../Context/useTheme";
+import logo from "../../assets/logo.jpeg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -19,11 +19,10 @@ const Navbar = () => {
 
     const navItems = [
         { name: "Home", path: "/" },
-        { name: "About", path: "/about" },
         { name: "Services", path: "/services" },
         { name: "Portfolio", path: "/portfolio" },
         { name: "Careers", path: "/careers" },
-        { name: "Contact", path: "/contact" }
+        { name: "Privacy Policy", path: "/privacy" }
     ];
 
     const closeMenu = () => setMenuOpen(false);
@@ -34,14 +33,7 @@ const Navbar = () => {
             <div className="navbar-container">
 
                 <Link to="/" className="navbar-logo" onClick={closeMenu}>
-                    <span className="logo-symbol">
-                        <Zap size={27} fill="currentColor" />
-                    </span>
-
-                    <span>
-                        ZEUS
-                        <small>TECHNOLOGY</small>
-                    </span>
+                    <img src={logo} alt="Zeus Technology" />
                 </Link>
 
                 <nav className={`nav-links ${menuOpen ? "show" : ""}`}>

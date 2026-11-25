@@ -1,7 +1,7 @@
 
-import React from "react";
 import { Link } from "react-router-dom";
-import {Mail, Zap } from "lucide-react";
+import { Camera, Globe, Mail } from "lucide-react";
+import logo from "../../assets/logo.jpeg";
 import "./Footer.css";
 
 const Footer = () => {
@@ -16,8 +16,7 @@ const Footer = () => {
                     <div className="footer-brand">
 
                         <h2>
-                            <Zap size={25} fill="currentColor" />
-                            ZEUS<span>.</span>
+                            <img src={logo} alt="Zeus Technology" />
                         </h2>
 
                         <p className="footer-tagline">
@@ -34,9 +33,9 @@ const Footer = () => {
                     <div className="footer-column">
                         <h3>Explore</h3>
                         <Link to="/">Home</Link>
-                        <Link to="/about">About Us</Link>
                         <Link to="/services">Services</Link>
                         <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/privacy">Privacy Policy</Link>
                     </div>
 
                     <div className="footer-column">
@@ -58,7 +57,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <Instagram size={15} />
+                            <Camera size={15} />
                             Instagram
                         </a>
 
@@ -67,7 +66,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <Linkedin size={15} />
+                            <Globe size={15} />
                             LinkedIn
                         </a>
                     </div>
